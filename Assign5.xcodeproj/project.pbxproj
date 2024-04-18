@@ -14,6 +14,7 @@
 		7D32AF422BD1D0A300A0F490 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AF412BD1D0A300A0F490 /* MapView.swift */; };
 		7D32AF442BD1D13900A0F490 /* CapitalCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AF432BD1D13900A0F490 /* CapitalCity.swift */; };
 		7D32AF462BD1D9F700A0F490 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AF452BD1D9F700A0F490 /* RecipeView.swift */; };
+		7D32AF482BD1DCA900A0F490 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AF472BD1DCA900A0F490 /* ContainerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		7D32AF412BD1D0A300A0F490 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		7D32AF432BD1D13900A0F490 /* CapitalCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalCity.swift; sourceTree = "<group>"; };
 		7D32AF452BD1D9F700A0F490 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
+		7D32AF472BD1DCA900A0F490 /* ContainerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 			children = (
 				7D32AF412BD1D0A300A0F490 /* MapView.swift */,
 				7D32AF452BD1D9F700A0F490 /* RecipeView.swift */,
+				7D32AF472BD1DCA900A0F490 /* ContainerView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			files = (
 				7D32AEF22BD1C78400A0F490 /* ContentView.swift in Sources */,
 				7D32AF422BD1D0A300A0F490 /* MapView.swift in Sources */,
+				7D32AF482BD1DCA900A0F490 /* ContainerView.swift in Sources */,
 				7D32AEF02BD1C78400A0F490 /* Assign5App.swift in Sources */,
 				7D32AF442BD1D13900A0F490 /* CapitalCity.swift in Sources */,
 				7D32AF462BD1D9F700A0F490 /* RecipeView.swift in Sources */,

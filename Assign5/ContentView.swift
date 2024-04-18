@@ -18,7 +18,7 @@ struct ContentView: View {
 
     var body: some View {
             TabView(selection: $selectedTab) {
-                MapView(capitalCities: capitalCities)
+                ContainerView(capitalCities: capitalCities)
                     .tabItem {
                         Label("Map", systemImage: "map.fill")
                     }
