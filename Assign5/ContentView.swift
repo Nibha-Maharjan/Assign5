@@ -24,7 +24,7 @@ struct ContentView: View {
                     }
                     .tag(Tab.map)
                 
-                RecipeView()
+                RecipeView(capitalCities: capitalCities)
                     .tabItem {
                         Label("Recipes", systemImage: "book.fill")
                     }
