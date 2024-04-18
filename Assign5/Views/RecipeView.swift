@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct RecipeView: View {
     let capitalCities: [CapitalCity]
@@ -51,7 +52,10 @@ struct RecipeButton: View {
 
 struct CityRecipeDetailView: View {
     let city: CapitalCity
-    
+    @State private var selectedImage: UIImage?
+    @State private var isShowingImagePicker = false
+    @State private var isShowingSelectedImage = false
+
     var body: some View {
         ScrollView {
             VStack(spacing: 20) {
@@ -60,24 +64,24 @@ struct CityRecipeDetailView: View {
                     .fontWeight(.bold)
                     .foregroundColor(.black)
                     .padding(.top, 20)
-                
+
                 Text("Recipe: \(city.recipeName)")
                     .font(.headline)
                     .foregroundColor(.blue)
                     .padding(.horizontal, 20)
-                
+
                 Text("Description: \(city.recipeDescription)")
                     .font(.body)
                     .foregroundColor(.gray)
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 20)
-                
+
                 VStack(alignment: .leading, spacing: 10) {
                     Text("Recipe Steps:")
                         .font(.headline)
                         .foregroundColor(.black)
                         .padding(.horizontal, 20)
-                    
+
                     ForEach(0..<city.recipeSteps.count, id: \.self) { index in
                         Text("\(index + 1). \(city.recipeSteps[index])")
                             .font(.body)
@@ -85,10 +89,44 @@ struct CityRecipeDetailView: View {
                             .padding(.horizontal, 20)
                     }
                 }
+
+                HStack(spacing: 20) {
+                    Button(action: {
+                        isShowingImagePicker.toggle()
+                    }) {
+                        Text("Select Image")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+
+                    Button(action: {
+                        isShowingSelectedImage.toggle()
+                    }) {
+                        Text("Show/Hide Image")
+                            .font(.headline)
+                            .foregroundColor(.white)
+                            .padding()
+                            .background(Color.blue)
+                            .cornerRadius(10)
+                    }
+                }
                 
-                Spacer()
+                if isShowingSelectedImage {
+                    if let image = selectedImage {
+                        Image(uiImage: image)
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                            .padding()
+                    }
+                }
             }
             .padding(.bottom, 20)
+        }
+        .sheet(isPresented: $isShowingImagePicker) {
+            ImagePicker(selectedImage: $selectedImage)
         }
         .navigationBarTitle(city.name)
     }
