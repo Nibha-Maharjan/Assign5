@@ -31,7 +31,20 @@ struct ContentView: View {
                     .tag(Tab.recipe)
             }
             .navigationBarTitle("Recipe Finder")
-            .background(Color.white.edgesIgnoringSafeArea(.all)) // Set background color
-        }
+            .background(Color.white.edgesIgnoringSafeArea(.all))
+            .accentColor(.black)
+            .foregroundColor(.red)
+            .onAppear {
+                
+                    UITabBar.appearance().barTintColor = UIColor.white
+                    UITabBar.appearance().layer.borderWidth = 0.0
+                    UITabBar.appearance().clipsToBounds = true
+                    UITabBar.appearance().unselectedItemTintColor = UIColor.darkGray
+                    UITabBar.appearance().layer.shadowColor = UIColor.black.cgColor
+                    UITabBar.appearance().layer.shadowOffset = CGSize(width: 0.0, height: -3.0)
+                    UITabBar.appearance().layer.shadowRadius = 6.0
+                    UITabBar.appearance().layer.shadowOpacity = 0.3
+                }
     }
+}
 
