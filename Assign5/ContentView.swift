@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
-        }
-        .padding()
-    }
-}
+    let capitalCities = [CapitalCity.london, CapitalCity.rome, CapitalCity.newYork, CapitalCity.toronto, CapitalCity.tokyo]
+    @State private var selectedTab: Tab = .map
 
-#Preview {
-    ContentView()
-}
+    enum Tab {
+        case map
+        case recipe
+    }
+
+    var body: some View {
+            TabView(selection: $selectedTab) {
+                MapView(capitalCities: capitalCities)
+                    .tabItem {
+                        Label("Map", systemImage: "map.fill")
+                    }
+                    .tag(Tab.map)
+                
+                RecipeView()
+                    .tabItem {
+                        Label("Recipes", systemImage: "book.fill")
+                    }
+                    .tag(Tab.recipe)
+            }
+            .navigationBarTitle("Recipe Finder")
+            .background(Color.white.edgesIgnoringSafeArea(.all)) // Set background color
+        }
+    }
+

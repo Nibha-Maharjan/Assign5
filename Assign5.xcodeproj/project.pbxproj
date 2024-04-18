@@ -11,6 +11,9 @@
 		7D32AEF22BD1C78400A0F490 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AEF12BD1C78400A0F490 /* ContentView.swift */; };
 		7D32AEF42BD1C78600A0F490 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D32AEF32BD1C78600A0F490 /* Assets.xcassets */; };
 		7D32AEF72BD1C78600A0F490 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D32AEF62BD1C78600A0F490 /* Preview Assets.xcassets */; };
+		7D32AF422BD1D0A300A0F490 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AF412BD1D0A300A0F490 /* MapView.swift */; };
+		7D32AF442BD1D13900A0F490 /* CapitalCity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AF432BD1D13900A0F490 /* CapitalCity.swift */; };
+		7D32AF462BD1D9F700A0F490 /* RecipeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D32AF452BD1D9F700A0F490 /* RecipeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +22,9 @@
 		7D32AEF12BD1C78400A0F490 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7D32AEF32BD1C78600A0F490 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D32AEF62BD1C78600A0F490 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7D32AF412BD1D0A300A0F490 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
+		7D32AF432BD1D13900A0F490 /* CapitalCity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapitalCity.swift; sourceTree = "<group>"; };
+		7D32AF452BD1D9F700A0F490 /* RecipeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +57,8 @@
 		7D32AEEE2BD1C78400A0F490 /* Assign5 */ = {
 			isa = PBXGroup;
 			children = (
+				7D32AF2E2BD1CC5400A0F490 /* Models */,
+				7D32AF272BD1CC1D00A0F490 /* Views */,
 				7D32AEEF2BD1C78400A0F490 /* Assign5App.swift */,
 				7D32AEF12BD1C78400A0F490 /* ContentView.swift */,
 				7D32AEF32BD1C78600A0F490 /* Assets.xcassets */,
@@ -65,6 +73,23 @@
 				7D32AEF62BD1C78600A0F490 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7D32AF272BD1CC1D00A0F490 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				7D32AF412BD1D0A300A0F490 /* MapView.swift */,
+				7D32AF452BD1D9F700A0F490 /* RecipeView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7D32AF2E2BD1CC5400A0F490 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7D32AF432BD1D13900A0F490 /* CapitalCity.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +163,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D32AEF22BD1C78400A0F490 /* ContentView.swift in Sources */,
+				7D32AF422BD1D0A300A0F490 /* MapView.swift in Sources */,
 				7D32AEF02BD1C78400A0F490 /* Assign5App.swift in Sources */,
+				7D32AF442BD1D13900A0F490 /* CapitalCity.swift in Sources */,
+				7D32AF462BD1D9F700A0F490 /* RecipeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,6 +300,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Assign5/Preview Content\"";
+				DEVELOPMENT_TEAM = 66J9Z38C8A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +329,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Assign5/Preview Content\"";
+				DEVELOPMENT_TEAM = 66J9Z38C8A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
